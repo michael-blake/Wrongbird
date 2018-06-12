@@ -8,10 +8,6 @@ body{
    margin: auto;
 }
 
-body.nav-open{
-  overflow: hidden !important;
-}
-
 @font-face{
   font-family: 'Lato';
   src: url("../fonts/Lato-Regular.ttf");
@@ -41,28 +37,113 @@ body.nav-open{
 }
 
 #content{
-  height: 100vh;
-  text-align: center;
-  align-items: center;
 }
 
-#title-block{
+#name{
   display: inline;
   align-items: center;
   color: white;
   transition: opacity 4s linear;
+  font-size: 3em;
+  cursor: default;
+  position: fixed;
+  top: 40vh;
+  text-align: center;
 }
 
-#name{
-  font-size: 4em;
+.name-top{
+  top: 0;
+  font-size: 2em;
 }
 
 #desc{
   font-size: 2em;
 }
 
+.panel{
+  position: relative;
+}
+
+.home{
+  text-align: center;
+  width: 100%;
+  align-items: center;
+}
+
+.info{
+  padding-top: 3em;
+}
+
+#nav-pane{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  cursor: default;
+}
+
+#nav-area{
+  position: fixed;
+  display: -webkit-box;
+  flex-grow: 1;
+  height: 100%;
+}
+
+#shows-area{
+  /* background-color: red; */
+}
+#gallery-area{
+  /* background-color: blue; */
+}
+#video-area{
+  /* background-color: green; */
+}
+#contact-area{
+  /* background-color: purple; */
+}
+.nav-button{
+  cursor: pointer;
+  color: #5a5a5a;
+}
+
+.nav-selected{
+  color: white;
+}
+
+.nav-location{
+  width: 100%;
+  height: 100%;
+  margin-right: 30px;
+}
+
+
 .vertical-center {
   min-height: 100vh;
   display: flex;
   align-items: center;
+}
+
+.invisible{
+  visiblity: hidden !important;
+}
+
+html {
+  font-size: 1rem;
+}
+
+@media (min-width: 576px) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 992px) {
+  html {
+    font-size: 2rem;
+  }
 }
