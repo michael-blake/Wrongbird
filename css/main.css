@@ -13,8 +13,16 @@ body{
   src: url("../fonts/Lato-Regular.ttf");
 }
 
-#background{
+#black-backdrop{
   background-color: black;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+}
+
+#background{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -22,6 +30,9 @@ body{
   z-index: -1;
   width: 100%;
   height: 100vh;
+  /* background-image: url("../images/WrongbirdSlate.gif"); */
+  background-image: url("https://www.imgur.com/Vb5VhUn.png");
+  opacity: 0.3;
 }
 
 .video{
@@ -37,6 +48,9 @@ body{
 }
 
 #content{
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
 
 #name{
@@ -68,10 +82,14 @@ body{
   text-align: center;
   width: 100%;
   align-items: center;
+  height: 100vh;
+  /* transition-duration: 5s; */
+
 }
 
 .info{
   padding-top: 3em;
+  height: 100vh;
 }
 
 #nav-pane{
@@ -82,13 +100,14 @@ body{
 }
 
 #nav-area{
-  position: fixed;
-  display: -webkit-box;
+  /* position: fixed; */
   flex-grow: 1;
   height: 100%;
+  display: -webkit-box;
 }
 
 #shows-area{
+  display: grid;
   /* background-color: red; */
 }
 #gallery-area{
@@ -122,12 +141,61 @@ body{
   align-items: center;
 }
 
-.invisible{
-  visiblity: hidden !important;
+.hide{
+  display: none !important;
 }
+
+#show{
+  max-width: 1000px;
+  color: white;
+  background-color: rgba(1,1,1,.5);
+  padding: 10px;
+  display: inline-block;
+  margin: 15px auto;
+  font-size: 0.8em;
+}
+
+.show-left{
+  float: left;
+}
+
+.show-right{
+  float: right;
+}
+
+.grid-item { 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  width: 4em;
+  height: 4em;
+  float: left;
+}
+
+.grid-item-wide {
+  width: 8em;
+  height: 4em;
+}
+
+.grid-item-tall {
+  width: 4em;
+  height: 8em;
+}
+
+.grid-item:hover{
+  opacity: 0.6;
+}  
+
+.grid-item--width2 { width: 400px; height: 400px; }
+
 
 html {
   font-size: 1rem;
+}
+
+a {
+  color: white;
 }
 
 @media (min-width: 576px) {

@@ -12,21 +12,22 @@
     <link rel="shortcut icon" href="images/favicon.ico">
 
     <!-- <script src="src/jQuery.js"></script> -->
-    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/easing.js"></script>
     <script src="js/jquery.scrollify.js"></script>
     <script src="js/instafeed.js"></script>
     <script src="https://platform.instagram.com/en_US/embeds.js"></script>
+    <script src="js/masonry.js"></script>
     <script src="js/main.js"></script>
+
 
     <!-- Font Awesome Icons -->
     <script src="https://use.fontawesome.com/eb64c4668b.js"></script>
 </head>
 
 <body>
+    <div id="black-backdrop"></div>
     <div id="background"></div>    
-    <div id="player" class="video invisible"></div>    
     <div id="name" class="col-12" style="opacity:0">Wrongbird</div>
     <div id="content">
         <section class="panel home" data-section-name="home"></section>
@@ -38,16 +39,24 @@
 
 
 <!-- ///////////////////////////STUBS FOR CLONING/////////////////////////// -->
-    <div id="shows-area" class="nav-location hide">
-        <div id="gig-list">
+    <div id="shows-area" class="col-12 hide"></div> 
 
-        </div>
-    </div> 
-
-    <div id="gallery-area" class="nav-location hide"></div>
+    <div id="gallery-area" class="nav-location hide">
+        <div class="grid"></div>
+    </div>
 
     <div id="video-area" class="nav-location hide"></div>
 
     <div id="contact-area" class="nav-location hide"></div> 
+
+    <div id="show" class="col-12 hide">
+        <div class="show-left">
+            <div class="location"></div>
+            <div class="date"></div>
+        </div>
+        <div class="show-right">
+            <div class="link"></div>
+        </div>
+    </div>
 
 </body>
